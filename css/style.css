@@ -481,7 +481,11 @@ a{
     padding: 4% 0%;
 }
 .latest-news-text{
-padding: 50% 5% 0%;
+padding: 25% 5% 20%;
+}
+.latest-news-text .card-text{
+    text-shadow: 5px 5px 5px #c14679;
+    font-weight: bold;
 }
 .latest-news-img:hover{
     transform: scale(1.1);
