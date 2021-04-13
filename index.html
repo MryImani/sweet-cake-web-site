@@ -808,11 +808,11 @@
 
             $('.offer-section-card').mouseenter(function () {
 
-               $('.card-link').css({
+               $(this).children().children().children().children('.card-link').css({
                     color: '#c14679',
                     border: '2px solid #c14679'
                 });
-                $('.offer-image').css('border', 'none');
+                $(this).children().children('.offer-image').css('border', 'none');
 
             })
             $('.offer-section-card').mouseleave(function () {
@@ -827,9 +827,9 @@
             })
 
             $(' .proc-section-card').mouseenter(function () {
-                $('.proc-section-icons ').css('display', 'block');
-                $('.proc-section-icon-search').fadeIn(1000);
-                $('.proc-section-icon-shopping-cart').fadeIn(1500);
+               $(this).children().children('.proc-section-icons ').css('display', 'block');
+               $(this).children().children().children('.proc-section-icon-search').fadeIn(500);
+               $(this).children().children().children('.proc-section-icon-shopping-cart').fadeIn(800);
 
             })
             $(' .proc-section-card').mouseleave(function () {
