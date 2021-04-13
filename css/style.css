@@ -5,6 +5,8 @@ html {
 body {
     font-family: 'iransans', 'Helvetica Neue', sans-serif;
     line-height: 1.5;
+    min-height: 83rem;
+  padding-top: 5.9rem;
 }
 
 p {
@@ -14,6 +16,7 @@ p {
 a{
     text-decoration: none;
 }
+
 .color-black-15 {
     color: #151515;
 }
@@ -243,25 +246,20 @@ a{
     font-weight: bold;
 }
 
-.active1 {
-    color: #c14679 !important;
-}
-
 .nav-link:hover {
     border-bottom: 5px solid #c14679;
 }
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link
+{
+    color: #c14679;
+    border-bottom: 5px solid #c14679;
 
-.nav-link:active {
-    color: #c14679 !important;
 }
-
-
 /* title section */
 
 #title .card-body {
     padding: 0;
 }
-
 .title-section-content-sub-title {
     font-size: 1.3rem;
     font-weight: bold;
