@@ -50,15 +50,15 @@
     <!-- nav section -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container ">
-            <button class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border-0 btn-cllapse" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand " href="https://enigmatic-sierra-30939.herokuapp.com/"><img class="img-fluid"
                     src="images/logo.png" alt="Cake-Asal-Banoo-img"></a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="navbar-nav mr-sm-5 ">
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-sm-5 col-6 col-lg-12">
                     <li class="nav-item"><a class="nav-link active" href="#">صفحه اصلی</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">محصولات</a></li>
                     <li class="nav-item"><a class="nav-link" href="grid-gallery.html">گالری</a></li>
@@ -66,12 +66,32 @@
                     <li class="nav-item"><a class="nav-link" href="contactUs.html">تماس با ما</a></li>
                 </ul>
             </div>
-            <div class="d-flex ">
+            <div class="navbar-box-icon d-flex">
                 <a role="button" href="#"><i class="fa fa-shopping-cart p-2  color-pink" aria-hidden="true"></i></a>
-                <a role="button" href="#"><i class="fa fa-search p-2 color-pink"></i></a>
+                <a role="button" href="#" data-bs-toggle="modal" data-bs-target=".bd-example-modal-xl"><i
+                        class="fa fa-search p-2 color-pink"></i></a>
             </div>
         </div>
     </nav>
+    <!--modal-->
+    <div class="modal fade bd-example-modal-xl " tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group ">
+                                <input type="text" class=" form-control border-0 " id="search-text" placeholder="جست و جو کنید...">
+                                <i role="button" class=" fa fa-search fa-2x input-group-append input-group-search-icon"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End modal-->
     <!-- title section -->
     <section id="title">
 
@@ -188,10 +208,10 @@
     <!--end offer section -->
     <!-- new product section -->
     <section id="new-product" class="bg-img-2">
+        <div class="row">
+            <h2 class="title-section">جدیدترین محصولات</h2>
+        </div>
         <div class="container">
-            <div class="row">
-                <h2 class="title-section">جدیدترین محصولات</h2>
-            </div>
             <div class="row">
                 <!--single product-->
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -524,7 +544,7 @@
             <h2 class=" title-section">نظرات شما</h2>
             <div class="row">
                 <!--single comment-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="proc-section-card card">
                         <div class="card-body m-4">
                             <div class=" d-flex flex-column">
@@ -547,7 +567,7 @@
                 </div>
                 <!--end single comment-->
                 <!--single comment-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="proc-section-card card">
                         <div class="card-body m-4">
                             <div class=" d-flex flex-column">
@@ -570,7 +590,7 @@
                 </div>
                 <!--end single comment-->
                 <!--single comment-->
-                <div class="col-10 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="proc-section-card card">
                         <div class="card-body m-4">
                             <div class=" d-flex flex-column">
@@ -617,7 +637,8 @@
                                 <img class="img-fluid latest-news-img" src="images/post-2-270x215.jpg"
                                     alt="new-post-img">
                                 <div class="latest-news-text card-img-overlay text-center">
-                                    <h6 class="card-title text-light"><span>9</span><span>مرداد</span><span>1399</span></h6>
+                                    <h6 class="card-title text-light"><span>9</span><span>مرداد</span><span>1399</span>
+                                    </h6>
                                     <p class="card-text text-light"> 5 نکته برای پخت کیک موفق</p>
                                 </div>
                             </div>
@@ -629,7 +650,8 @@
                                 <img class="img-fluid latest-news-img" src="images/post-3-270x215.jpg"
                                     alt="new-post-img">
                                 <div class="latest-news-text card-img-overlay text-center">
-                                    <h6 class="card-title text-light"><span>9</span><span>مرداد</span><span>1399</span></h6>
+                                    <h6 class="card-title text-light"><span>9</span><span>مرداد</span><span>1399</span>
+                                    </h6>
                                     <p class="card-text text-light"> 5 نکته برای پخت کیک موفق</p>
                                 </div>
                             </div>
@@ -682,37 +704,37 @@
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-1-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-1-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-1-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-2-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-2-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-2-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-3-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-3-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-3-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-4-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-4-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-4-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-5-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-5-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-5-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-6-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-6-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-6-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                     </div>
@@ -774,8 +796,7 @@
                 <div class="col mx-auto">
                     <p class="text-center"><span>&copy;&nbsp;</span><span
                             class="copyright-year">2021</span><span>.&nbsp;</span><span>عسل بانو
-                        </span><span>.&nbsp;</span><span>کلیه حقوق این سایت متعلق به MryI
-                            میباشد</span><span>.&nbsp;</span><a href="privacy-policy.html">حریم خصوصی.</a></p>
+                        </span><span>.&nbsp;</span><a href="privacy-policy.html">حریم خصوصی.</a></p>
                 </div>
             </div>
         </div>
@@ -797,47 +818,7 @@
     <script src="zoomove-master/dist/zoomove.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.preloader').addClass('loaded');
-            $('.nav-link').click(function(){
-                $(this).addClass('active');
-                $(this).parent().siblings().children().removeClass('active');
-            })
 
-
-
-            $('.offer-section-card').mouseenter(function () {
-
-               $(this).children().children().children().children('.card-link').css({
-                    color: '#c14679',
-                    border: '2px solid #c14679'
-                });
-                $(this).children().children('.offer-image').css('border', 'none');
-
-            })
-            $('.offer-section-card').mouseleave(function () {
-
-                $('.card-link').css({
-                    color: '#151515',
-                    border: 'none',
-                    borderBottom: '2px solid #777777'
-                });
-                $('.offer-image').css('border', '1px solid #dee2e6');
-
-            })
-
-            $(' .proc-section-card').mouseenter(function () {
-               $(this).children().children('.proc-section-icons ').css('display', 'block');
-               $(this).children().children().children('.proc-section-icon-search').fadeIn(500);
-               $(this).children().children().children('.proc-section-icon-shopping-cart').fadeIn(800);
-
-            })
-            $(' .proc-section-card').mouseleave(function () {
-                $('.proc-section-icons').css('display', 'none');
-                $('.proc-section-icon-search').hide();
-                $('.proc-section-icon-shopping-cart').hide();
-            })
-        })
     </script>
 
 </body>

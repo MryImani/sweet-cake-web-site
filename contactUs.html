@@ -48,7 +48,7 @@
     </div>
     <!--end preloader-->
     <!-- nav section -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <div class="container ">
             <button class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
@@ -56,25 +56,47 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand " href="https://enigmatic-sierra-30939.herokuapp.com/"><img class="img-fluid"
-                    src="images/logo.png" alt="Cake-Asal-Banoo-img"></a>
+                    src="images/logo.png" alt="Cake-Asal-Banu-img"></a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="navbar-nav mr-sm-5 ">
-                    <li class="nav-item"><a class="nav-link" href="index.html">صفحه اصلی</a></li>
+                <ul class="navbar-nav mr-sm-5 col-6 col-lg-12">
+                    <li class="nav-item"><a class="nav-link " href="index.html">صفحه اصلی</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">محصولات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="grid-gallery.html">گالری</a></li>
+                    <li class="nav-item"><a class="nav-link " href="grid-gallery.html">گالری</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">درباره ما</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contactUs.html">تماس با ما</a></li>
                 </ul>
             </div>
-            <div class="d-flex ">
+            <div class="navbar-box-icon d-flex ">
                 <a role="button" href="#"><i class="fa fa-shopping-cart p-2  color-pink" aria-hidden="true"></i></a>
-                <a role="button" href="#"><i class="fa fa-search p-2 color-pink"></i></a>
+                <a role="button" href="#" data-bs-toggle="modal" data-bs-target=".bd-example-modal-xl"><i
+                        class="fa fa-search p-2 color-pink"></i></a>
             </div>
         </div>
     </nav>
     <!--end nav section -->
+    <!--modal-->
+    <div class="modal fade bd-example-modal-xl " tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group ">
+                                <input type="text" class=" form-control border-0 " id="search-text"
+                                    placeholder="جست و جو کنید...">
+                                <i role="button"
+                                    class=" fa fa-search fa-2x input-group-append input-group-search-icon"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End modal-->
     <!-- Page Title -->
-    <section class="bg-img-7  d-flex flex-column justify-content-center">
+    <section id="page-title" class="bg-img-7  d-flex flex-column justify-content-center">
         <div class="container">
             <div class="row ">
                 <div class="col-10 mx-auto text-center">
@@ -84,6 +106,92 @@
         </div>
     </section>
     <!--End Page Title -->
+    <!--Contact section-->
+    <section id="contact-form">
+        <div class="container">
+            <div class="row py-5 my-2">
+                <div class="col-md-4 p-4 text-center">
+                    <h2 class="contact-title">
+                        فرم تماس 
+                    </h2>
+                </div>
+                <div class="col-md-7  p-4 ">
+                    <p class=" text-justify">
+                          همکاران ما  24/7 توسط فکس, ایمیل و یا از طریق تلفن در دسترس هستند.
+                           شما همچنین می توانید از طریق  فرم تماس سوالات خود را در مورد محصولات ما بپرسید .
+                    </p>
+                </div>
+            </div>
+            <!--Contact Form-->
+            <div class="row ">
+                <form  data-form-output="form-output-global" data-form-type="contact" method="post" action="">
+                    <div class="row row-20 row-md-30">
+                      <div class="col-lg-8">
+                        <div class="row row-20 row-md-30">
+                          <div class="col-sm-6">
+                            <div class="form-wrap border-bottom p-4 ">
+                              <input class="form-input  " id="contact-first-name-2" type="text" name="name" data-constraints="@Required" placeholder="نام"/>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-wrap  border-bottom p-4">
+                              <input class="form-input  " id="contact-last-name-2" type="text" name="name" data-constraints="@Required" placeholder="نام خانوادگی"/>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-wrap  border-bottom p-4 d-flex justify-content-end">
+                              <input class="form-input  " id="contact-email-2" type="email" name="email" data-constraints="@Email @Required" placeholder="E-mail"/>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-wrap  border-bottom p-4">
+                              <input class="form-input  " id="contact-phone-2" type="text" name="phone" data-constraints="@Numeric" placeholder="تلفن"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="contact-message form-wrap  p-4">
+                          <textarea class="form-input  textarea-lg" id="contact-message-2" name="contact-message" data-constraints="@Required" placeholder="پیام"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-sm-end justify-content-center">
+                        <button class="btn-send-message btn btn-lg m-5 justify-content-center" type="submit">ارسال پیام</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </section>
+    <section id="contact-info" class="bg-light">
+        <div class="container">
+            <div class="row info-text p-5 text-center">
+               <div class="col-12 col-md-4">
+                   <div class="d-flex flex-column justify-content-around pb-4">
+                       <h4 class="pb-2">ایمیل:</h4>
+                       <p class="color-black-15" >info@demolink.org</p>
+                       <p class="color-black-15" >mail@demolink.org</p>
+                   </div>
+               </div>
+               <div class="col-12 col-md-4">
+                <div class="d-flex flex-column justify-content-center pb-4">
+                    <h4 class="pb-2">آدرس:</h4>
+                    <p class="color-black-15" >تهران،خیابان ستارخان</br></p>ستارخان27،پلاک 5</p>
+                </div>
+               </div>
+               <div class="col-12 col-md-4">
+                <div class="d-flex flex-column justify-content-center pb-4">
+                    <h4 class="pb-2">تلفن:</h4>
+                    <p class="color-black-15" >+98 (021) 123 456 78</p>
+                    <p class="color-black-15" >+98 (021) 123 456 79</p>
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <!--End Gallery section-->
+
+
     <!-- footer section -->
     <section id="footer">
         <div class="container">
@@ -94,37 +202,37 @@
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-1-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-1-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-1-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-2-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-2-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-2-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-3-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-3-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-3-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-4-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-4-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-4-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-5-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-5-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-5-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                         <div class="col-4 col-sm-2 col-lg-4">
                             <!-- Thumbnail Minimal--><a class="thumbnail-minimal"
                                 href="images/grid-gallery-6-original.jpg" data-lightgallery="item"><img
-                                    src="images/grid-gallery-6-130x130.jpg" class="img-fluid pb-2" alt="" width="130"
+                                    src="images/grid-gallery-6-130x130.jpg" class="img-fluid pb-4" alt="" width="130"
                                     height="130" /></a>
                         </div>
                     </div>
@@ -186,13 +294,12 @@
                 <div class="col mx-auto">
                     <p class="text-center"><span>&copy;&nbsp;</span><span
                             class="copyright-year">2021</span><span>.&nbsp;</span><span>عسل بانو
-                        </span><span>.&nbsp;</span><span>کلیه حقوق این سایت متعلق به MryI
-                            میباشد</span><span>.&nbsp;</span><a href="privacy-policy.html">حریم خصوصی.</a></p>
+                        </span><span>.&nbsp;</span><a href="privacy-policy.html">حریم خصوصی.</a></p>
                 </div>
             </div>
         </div>
         <div>
-            <a href="#title" class="go-up" title="رفتن به بالا"><i class=" fa fa-arrow-up"></i></a>
+            <a href="#page-title" class="go-up" title="رفتن به بالا"><i class=" fa fa-arrow-up"></i></a>
         </div>
     </section>
     <!--end footer section -->
@@ -209,44 +316,6 @@
     <script src="zoomove-master/dist/zoomove.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.preloader').addClass('loaded');
-            $('.nav-link').click(function(){
-                $(this).addClass('active');
-                $(this).parent().siblings().children().removeClass('active');
-            })
-            $('.offer-section-card').mouseenter(function () {
-
-                $('.card-link').css({
-                    color: '#c14679',
-                    border: '2px solid #c14679'
-                });
-                $('.offer-image').css('border', 'none');
-
-            })
-            $('.offer-section-card').mouseleave(function () {
-
-                $('.card-link').css({
-                    color: '#151515',
-                    border: 'none',
-                    borderBottom: '2px solid #777777'
-                });
-                $('.offer-image').css('border', '1px solid #dee2e6');
-
-            })
-
-            $(' .proc-section-card').mouseenter(function () {
-                $('.proc-section-icons ').css('display', 'block');
-                $('.proc-section-icon-search').fadeIn(1000);
-                $('.proc-section-icon-shopping-cart').fadeIn(1500);
-
-            })
-            $(' .proc-section-card').mouseleave(function () {
-                $('.proc-section-icons').css('display', 'none');
-                $('.proc-section-icon-search').hide();
-                $('.proc-section-icon-shopping-cart').hide();
-            })
-        })
     </script>
 
 </body>

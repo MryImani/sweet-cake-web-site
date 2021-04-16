@@ -16,7 +16,6 @@ p {
 a{
     text-decoration: none;
 }
-
 .color-black-15 {
     color: #151515;
 }
@@ -253,8 +252,21 @@ a{
 {
     color: #c14679;
     border-bottom: 5px solid #c14679;
-
 }
+/* modal */
+.modal{
+    margin: 10rem 0;
+}
+.input-group-search-icon{
+    position: relative;
+    color: #d37597;
+    padding:10px 5px 0px;
+    transition: all 100ms ease-in-out;
+}
+.input-group-search-icon:hover{
+    color: #c14976;
+}
+
 /* title section */
 
 #title .card-body {
@@ -286,7 +298,7 @@ a{
 .sell-section-link {
     color: #fff;
     margin: 20px 0px 0px;
-    padding: 15px 5px;
+    padding: 15px;
     background-color: #c14679;
     border-radius: 100%;
     width: 50px;
@@ -596,6 +608,61 @@ padding: 25% 5% 20%;
 .go-up:hover{
     color: #f5f5f5;
 }
+/*******************************************grid gallery page******************************************/
+/*Gallery section */
+.gallery-item{
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.gallery-item:hover .gallery-photo{
+    opacity: 0;
+}
+.gallery-info{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.gallery-link{
+    color: #151515;
+    font-weight: 400;
+}
+.gallery-link:hover{
+    color: #9c164e;
+}
+.gallery-item:hover .gallery-info{
+    opacity: 1;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color:#c14679;
+    background-color:#fff;
+    border: none;
+    border-bottom: 5px solid #c14679;
+}
+
+.pills-tab-link{
+    color:gray ;
+    background-color: #fff;
+}
+.pills-tab-link:hover{
+    border-bottom: 5px solid #c14679;
+    color:gray;
+}
+/*******************************************Contact Us Page********************************************/
+#contact-info{
+    margin: 2% 0 25%;
+}
+textarea.textarea-lg {
+    min-width: 100%;
+    height: 150px;
+    max-height: 238px;
+}
+.contact-title{
+    border: none;
+    border-left: 1px solid #dee2e6;
+}
 /*******************************************reponsive**************************************************/
 
 @media screen and (min-width:1200px) {
@@ -613,6 +680,18 @@ padding: 25% 5% 20%;
 }
 
 @media screen and (max-width:990px) {
+    .navbar-light .navbar-nav .nav-link{
+        padding-right: 1rem;
+    }
+    .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link
+    {
+        color: #fff;
+        background-color: #c14679;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #fff !important;
+        background-color: #c14679;
+    }
     p {
         font-size: 0.8rem;
         line-height: 1.8;
@@ -641,24 +720,51 @@ padding: 25% 5% 20%;
     .bg-img-5 {
         min-height: 15rem;
     }
+    .gallery-info{
+        opacity: 1;
+        position: relative;
+        top:0;
+        left: 0;
+        padding-top: 7%;
+        transform: translate(0%,0%);
+        background-color:#f9faf9;
+    }
+    .gallery-item:hover .gallery-photo{
+        opacity: 1;
+    }
+
 }
 
 @media screen and (max-width:760px) {
+
     .service-border {
         border-top: none;
     }
     .title-section-content {
         margin-top: 20%;
     }
+    .contact-title{
+        border-left: none;
+    }
 }
 
 @media screen and (max-width:540px) {
-    .navbar-brand {
-        width: 40%;
-    }
+
     #about-us {
         padding: 3%;
     }
+    #gallery{
+        padding: 3%;
+    }
+    #gallery .nav{
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media screen and (min-width:320px) {}
+@media screen and (max-width:300px) {
+   
+}
