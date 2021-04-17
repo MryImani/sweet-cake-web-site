@@ -44,4 +44,7 @@ $(document).ready(function () {
         $('.proc-section-icon-search').hide();
         $('.proc-section-icon-shopping-cart').hide();
     })
+    $('.carousel').carousel({
+        interval: 10000
+    });
 })
