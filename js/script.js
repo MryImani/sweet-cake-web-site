@@ -1,4 +1,14 @@
 window.addEventListener('load', () => document.querySelector('.preloader').classList.add('loaded'));
+$(window).scroll(function() {
+    if ($(this).scrollTop()>300)
+     {
+        $('#btn-top').show(1000);
+     }
+    else
+     {
+      $('#btn-top').hide(1000);
+     }
+ });
 $(document).ready(function () {
     $('.preloader').addClass('loaded');
     $('.nav-link').click(function () {
